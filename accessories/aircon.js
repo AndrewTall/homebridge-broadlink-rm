@@ -247,11 +247,11 @@ class AirConAccessory extends BroadlinkRMAccessory {
 
     if (state.currentHeatingCoolingState !== state.targetHeatingCoolingState){
       // Selecting a heating/cooling state allows a default temperature to be used for the given state.
-      if (state.targetHeatingCoolingState === Characteristic.TargetHeatingCoolingState.HEAT) {
-        temperature = defaultHeatTemperature;
-      } else if (state.targetHeatingCoolingState === Characteristic.TargetHeatingCoolingState.COOL) {
-        temperature = defaultCoolTemperature;
-      }
+      // if (state.targetHeatingCoolingState === Characteristic.TargetHeatingCoolingState.HEAT) {
+      //   temperature = defaultHeatTemperature;
+      // } else if (state.targetHeatingCoolingState === Characteristic.TargetHeatingCoolingState.COOL) {
+      //   temperature = defaultCoolTemperature;
+      // }
 
       //Set the mode, and send the mode hex
       this.updateServiceCurrentHeatingCoolingState(state.targetHeatingCoolingState);
